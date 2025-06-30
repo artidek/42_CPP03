@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 19:05:42 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/06/29 21:11:19 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:28:23 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 DiamondTrap::DiamondTrap(void) : ClapTrap("diamond_clap_name"), ScavTrap(), FragTrap()
 {
-	this->_damage = FragTrap::_damage;
-	this->_energy = ScavTrap::_energy;
-	this->_health = FragTrap::_health;
+	this->_energy = ScavTrap::_defaultEnergy;
+	this->_damage = FragTrap::_defaultDamage;
+	this->_health = FragTrap::_defaultHealth;
 	std::cout << "DiamondTrap default constructor called\n";
 }
 
 DiamondTrap::DiamondTrap(const std::string &name) :  ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
-	this->_energy = ScavTrap::_energy;
-	this->_damage = FragTrap::_damage;
-	this->_health = FragTrap::_health;
+	this->_energy = ScavTrap::_defaultEnergy;
+	this->_damage = FragTrap::_defaultDamage;
+	this->_health = FragTrap::_defaultHealth;
 	std::cout << "DiamondTrap constructor called\n";
 }
 
@@ -55,8 +55,10 @@ void DiamondTrap::whoAmI(void)
 	std::cout << "I am " << this->_name << " and " << ClapTrap::_name << std::endl;
 }
 
+std::string	DiamondTrap::getMyName(void) {return this->_name;};
+
 std::ostream &operator<<(std::ostream &o, DiamondTrap &dt)
 {
-	o << dt.getName() << "[ health: " << dt.getHealth() << " damage: " << dt.getDamage() << " energy: " << dt.getEnergy();
+	o << dt.getMyName() << "[health: " << dt.getHealth() << " damage: " << dt.getDamage() << " energy: " << dt.getEnergy() << "]";
 	return o;
 }

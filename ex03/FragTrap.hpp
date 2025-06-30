@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 18:01:31 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/06/29 19:18:43 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:16:11 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 
 class FragTrap : public virtual ClapTrap
 {
+protected:
+	static int const _defaultHealth = 100;
+	static int const _defaultEnergy = 100;
+	static int const _defaultDamage = 30;
 public:
 	FragTrap(void);
 	FragTrap(const std::string& name);

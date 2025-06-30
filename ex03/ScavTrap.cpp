@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 12:55:55 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/06/29 21:25:17 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:09:26 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
-	this->_health = 100;
-	this->_energy = 50;
-	this->_damage = 20;
+	this->_health = _defaultHealth;
+	this->_energy = _defaultEnergy;
+	this->_damage = _defaultDamage;
 	std::cout << "ScavTrap default constructor called\n";
 }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 {
-	this->_health = 100;
-	this->_energy = 50;
-	this->_damage = 20;
+	this->_health = _defaultHealth;
+	this->_energy = _defaultEnergy;
+	this->_damage = _defaultDamage;
 	std::cout << "ScavTrap constructor called\n";
 }
 

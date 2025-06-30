@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/29 18:06:25 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/06/29 21:09:46 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:01:16 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 FragTrap::FragTrap(void) : ClapTrap()
 {
 	std::cout << "FragTrap default constructor called\n";
-	this->_health = 100;
-	this->_energy = 100;
-	this->_damage = 30;
+	this->_health = _defaultHealth;
+	this->_energy = _defaultEnergy;
+	this->_damage = _defaultDamage;
 }
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
 	std::cout << "FragTrap constructor called\n";
-	this->_health = 100;
-	this->_energy = 100;
-	this->_damage = 30;
+	this->_health = _defaultHealth;
+	this->_energy = _defaultEnergy;
+	this->_damage = _defaultDamage;
 }
 
 FragTrap::FragTrap(FragTrap& copy) : ClapTrap(copy)

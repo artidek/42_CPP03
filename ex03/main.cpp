@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 12:09:49 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/06/29 20:07:50 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:17:23 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int	main(void)
 	DiamondTrap dt("Mutant Robo chicken");
 	dt.whoAmI();
 	dt.attack("Robo duck");
+	std::cout << dt << std::endl;
 	return 0;
 }

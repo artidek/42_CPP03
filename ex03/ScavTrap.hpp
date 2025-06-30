@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aobshatk <aobshatk@42warsaw.pl>            +#+  +:+       +#+        */
+/*   By: aobshatk <aobshatk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 12:48:34 by aobshatk          #+#    #+#             */
-/*   Updated: 2025/06/29 21:24:56 by aobshatk         ###   ########.fr       */
+/*   Updated: 2025/06/30 12:16:01 by aobshatk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 
 class ScavTrap : public virtual ClapTrap
 {
+protected:
+	static int const _defaultHealth = 100;
+	static int const _defaultEnergy = 50;
+	static int const _defaultDamage = 20;
 public:
 	ScavTrap(void);
 	ScavTrap(const std::string& name);
